@@ -1,192 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="HandheldFriendly" content="true">
-    <meta name="theme-color" content="#F26B38">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="HandheldFriendly" content="true">
+	<meta name="theme-color" content="#F26B38">
 
-    <title>Happy Birthday | Mai Mhizha</title>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/balloon-css/0.5.0/balloon.min.css">
-    <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
-    <link rel="shortcut icon" href="icon/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/style.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: radial-gradient(circle, #F26B38, #F26B38);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-        }
-
-        #card {
-            perspective: 600px;
-            width: 80%;
-            max-width: 500px;
-            min-height: 70%;
-        }
-
-        #card-inside,
-        #card-front {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            backface-visibility: hidden;
-            transform-style: preserve-3d;
-            transition: 1s;
-        }
-
-        #card:hover #card-inside {
-            transform: rotateY(-180deg);
-        }
-
-        #card:hover #card-front {
-            transform: rotateY(180deg);
-        }
-
-        #card-front {
-            background: #fff;
-            padding: 2rem;
-            box-sizing: border-box;
-            border-radius: 10px;
-        }
-
-        #card-inside {
-            background: #fff;
-            padding: 2rem;
-            box-sizing: border-box;
-            transform: rotateY(180deg);
-            border-radius: 10px;
-        }
-
-        h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        p {
-            font-size: 1.2rem;
-            line-height: 1.6;
-        }
-
-        .signed {
-            font-size: 1.5rem;
-            text-align: right;
-            margin-top: 3rem;
-        }
-
-        .cake_and_velas {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .velas {
-            position: absolute;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100px;
-            height: 30px;
-        }
-
-        .fuego {
-            width: 0;
-            height: 0;
-            border-left: 5px solid transparent;
-            border-right: 5px solid transparent;
-            border-bottom: 15px solid #f69;
-        }
-
-        .fuego:nth-child(2) {
-           
-animation-delay: 0.1s;
-}
-
-    .fuego:nth-child(3) {
-        animation-delay: 0.2s;
-    }
-
-    .fuego:nth-child(4) {
-        animation-delay: 0.3s;
-    }
-
-    .fuego {
-        animation: fuego 1s infinite;
-    }
-
-    @keyframes fuego {
-        0%,
-        100% {
-            border-bottom-color: #f69;
-        }
-        50% {
-            border-bottom-color: #f93;
-        }
-    }
-
-    .cake {
-        width: 150px;
-        height: 100px;
-        background: #c69;
-        border-radius: 15px;
-        position: relative;
-        margin-bottom: 30px;
-        margin-top: -10px;
-    }
-
-    .cake:before {
-        content: "";
-        width: 100%;
-        height: 50%;
-        background: radial-gradient(circle, #f06, #c69);
-        position: absolute;
-        top: 50%;
-        left: 0;
-        border-radius: 0 0 15px 15px;
-    }
-
-    .cake:after {
-        content: "";
-        width: 100%;
-        height: 100%;
-        background: #e94;
-        position: absolute;
-        top: 0;
-        left: 0;
-        border-radius: 15px;
-        clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
-    }
-</style>
+	<title>Happy Birthday | Mai Mhizha</title>
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/balloon-css/0.5.0/balloon.min.css">
+	<link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+	<link rel="shortcut icon" href="icon/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<style>
+		@keyframes confetti {
+			0% {background-position: 0 0;}
+			100% {background-position: 100% 0;}
+		}
+		body {
+			background-image: url("https://www.transparenttextures.com/patterns/confetti.png");
+			animation: confetti 5s linear infinite;
+		}
+		.wrap:hover p {
+			transform: scale(1.1);
+		}
+		.wrap:hover h1 {
+			transform: scale(1.1);
+		}
+	</style>
 </head>
 <body>
-    <div id="card">
-        <div id="card-front">
-            <h1 class="animate__animated animate__bounce">Happy Birthday!</h1>
-            <p>Wishing you a wonderful day filled with love, laughter, and all the things that bring you joy.</p>
-            <p class="signed">- Your friends</p>
-        </div>
-        <div id="card-inside">
-            <div class="cake_and_velas">
-                <div class="velas">
-                    <div class="fuego animate__animated animate__tada animate__infinite"></div>
-                    <div class="fuego animate__animated animate__tada animate__infinite"></div>
-                    <div class="fuego animate__animated animate__tada animate__infinite"></div>
-                    <div class="fuego animate__animated animate__tada animate__infinite"></div>
-                </div>
-                <div class="cake"></div>
-            </div>
-            <p>Enjoy this virtual cake, and remember to make a wish! 🎂</p>
-            <p class="signed">- Mai Mhizha</p>
-        </div>
-    </div>
+	<br> <br> <br> <br> <br>
+	<div id="card">
+		<div id="card-inside">
+			<div class="wrap">
+				<center><p class="animated infinite wobble"><b><u>Happy Birthday My Queen!</b></u></p><center>
+				<p class="animated fadeIn delay-1s"> Happy birthday to my darling wife Ruvimbo Bungwe Mhizha. I thank God for your life. I am ever so grateful to have you in mine. Thank you for being a beautiful constant in a sea of ever changing forms, you have been dedicated as a mother, a wife, daughter, friend and sibling and more. I have seen you show up in all those facets as yourself loving so deeply its beautiful and inspiring witness. I just wanted to say to you that you are doing amazing Queen, may you experience a wonderful year of growth, love and abundant happiness. I love you loads baby 🥳🎉🍰🥳🎁🎂😘😘❤❤❤❤<i class="em-svg em-blush"></i></p>
+				 </p><p class="signed animated fadeIn delay-2s"><u>Made With </b><b> <i class="em-svg em-heart"></i></p>
+			</div>
+		</div>
+		<div id="card-front">
+			<div class="wrap">
+				<h1 class="animated infinite swing">Happy Birthday Rue❤
+</h1>
+				<p class="animated fadeIn delay-1s">To my beautiful wife,</p>
+				<p class="animated fadeIn delay-2s">Click the card to reveal your birthday message <i class="em-svg em-point_up"></i></p>
+			</div>
+		</div>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+	$(document).ready(function() {
+		$("#card").click(function() {
+			$("#card").toggleClass("flipped");
+		});
+	});
+</script>
 </body>
 </html>
